@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos Estudiante</title>
+    <title>Datos Persona</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <center>
-        <h1>Gestión de Datos de Estudiante</h1>
+        <h1>Gestión Datos Estudiantes</h1>
         <hr noshade="noshade" size="3" width="70%" color="blue">
         <br>
-        <table border="3" width="60%" cellpadding="5" cellspacing="0" color = "red">
-            <th> Propiedad </th>
-            <th> Valor </th>
+        <table border="3" style="background-color: rgb(17, 0, 255);">
+            <th>Propiedad</th>
+            <th>Valor</th>
             <tbody>
                 <tr>
                     <td>Cédula</td>
@@ -28,9 +28,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Apellido</td>
+                    <td>Apellidos</td>
                     <td>
-                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido" required>
+                        <input type="text" name="apellido" id="apellido" placeholder="Ingrese sus apellido" required>
                     </td>
                 </tr>
                 <tr>
@@ -53,33 +53,36 @@
                 </tr>
             </tbody>
         </table>
-        <br>
-        <table border="3" width="60%" cellpadding="5" cellspacing="0" color = "red">
+        <table border="3" style="background-color: rgb(12, 0, 63);">
             <tr>
                 <td>
-                    <button onclick="guardarDatos()">Guardar</button>
+                    <button id="Guardar" onclick="guardarDatos()">Guardar</button>
+                    <button id="actualizar" onclick="actualizarDatos()">Actualizar</button>
                 </td>
             </tr>
-        <table border="3" width="60%" cellpadding="5" cellspacing="0" color = "red">
+        </table>
         <br>
-        <h3>
+        <h3>Listado de Estudiantes</h3>
+        <table border="3" style="background-color: rgb(0, 255, 34);">
             <thead>
                 <tr>
-                    <th>cédula</th>
-                    <th>nombre</th>
-                    <th>apellido</th>
-                    <th>nota1</th>
-                    <th>nota2</th>
-                    <th>nota3</th>
+                    <th>Cédula</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
                     <th>Nota Final</th>
                     <th>Aprobado/Reprobado</th>
                     <th>Calificación Cualitativa</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody id="Datos Estudiante">
-                <!-- Aquí se mostrarán los datos de los estudiantes -->
-        </h3>
+            <tbody id="listadoEstudiantes">
+                <!-- Aquí se agregarán las filas dinámicamente -->
+            </tbody>
+        </table>
     </center>
+    <script src="Ejemplo_Objetos.js"></script>
 </body>
 </html>
